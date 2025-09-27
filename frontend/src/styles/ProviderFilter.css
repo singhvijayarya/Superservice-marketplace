@@ -1,0 +1,284 @@
+:root {
+    --primary-color: #6a5acd; /* Cosmic purple */
+    --secondary-color: #48d1cc; /* Medium turquoise */
+    --dark-bg: #0f0c29;
+    --card-bg: rgba(255, 255, 255, 0.85);
+  }
+  
+  .stellar-container {
+    position: relative;
+    padding: 30px;
+    min-height: 100vh;
+    background: linear-gradient(135deg, var(--dark-bg) 0%, #302b63 50%, #24243e 100%);
+    overflow: hidden;
+  }
+  
+  .star {
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.8));
+    z-index: 0;
+  }
+  
+  .glass-filter-panel {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .filter-label {
+    /* color: white !important; */
+    font-weight: 500;
+
+  }
+  
+  .stellar-select .ant-select-selector, 
+  .stellar-input .ant-input {
+    background: rgba(255, 255, 255, 0.2) !important;
+    color: white !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  }
+  
+  .stellar-select .ant-select-arrow, 
+  .stellar-input .ant-input-prefix {
+    color: var(--primary-color) !important;
+  }
+  
+  .stellar-button {
+    background: var(--primary-color);
+    border: none;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(106, 90, 205, 0.4);
+    transition: all 0.3s ease;
+  }
+  
+  .stellar-button:hover {
+    background: var(--secondary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(72, 209, 204, 0.6);
+  }
+  
+  .loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    position: relative;
+  }
+  
+  .pulse-effect {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: rgba(106, 90, 205, 0.2);
+    animation: pulse 2s infinite;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(0.8);
+      opacity: 0.7;
+    }
+    70% {
+      transform: scale(1.3);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+  }
+  
+  .stellar-card {
+    border-radius: 12px !important;
+    overflow: hidden;
+    background: var(--card-bg);
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .stellar-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card-header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  }
+  
+  .profile-avatar {
+    border: 3px solid white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+    margin-left: 20px;
+
+  }
+  
+  .shine-effect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.3) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    transform: translateX(-100%);
+  }
+  
+  .stellar-card:hover .shine-effect {
+    animation: shine 1.5s infinite;
+  }
+  
+  @keyframes shine {
+    100% {
+      transform: translateX(100%);
+    }
+  }
+  
+  .card-body {
+    padding: 16px;
+  }
+  
+  .provider-name {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 12px;
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+  
+  .provider-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    align-items: center;
+  }
+  
+  .provider-role {
+    background: rgba(106, 90, 205, 0.1);
+    padding: 4px 8px;
+    border-radius: 4px;
+    color: var(--primary-color);
+    font-size: 0.9rem;
+  }
+  
+  .provider-rating {
+    display: flex;
+    align-items: center;
+  }
+  
+  .rating-text {
+    margin-left: 5px;
+    font-weight: 600;
+    color: var(--primary-color);
+  }
+  
+  .provider-info {
+    margin: 16px 0;
+  }
+  
+  .provider-info p {
+    margin-bottom: 8px;
+    color: #555;
+  }
+  
+  .provider-status {
+    font-weight: 500;
+  }
+  
+  .contact-button {
+    background: var(--primary-color);
+    border: none;
+    margin-top: 16px;
+    font-weight: 500;
+    font-size: 1.7vw;
+  }
+  
+  .empty-state .ant-empty-description {
+    color: white !important;
+  }
+  
+  .reset-button {
+    background: var(--primary-color);
+    border: none;
+  }
+
+
+
+
+  /* Add these to your ProviderFilter.css */
+.glass-filter-panel-vertical {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  width: 1000px;
+
+}
+
+.vertical-filter-form {
+  /* display: flex; */
+  flex-direction: column;
+  gap: 20px;
+  padding: 10px 20px 10px 20px ;
+}
+
+.form-title {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.form-subtitle {
+  color: #666;
+  margin-bottom: 0;
+}
+
+.form-divider {
+  margin: 16px 0;
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+.stellar-select-vertical, .stellar-input-vertical {
+  width: 100%;
+}
+
+.stellar-button-vertical {
+  height: 45px;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.rating-filters-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+@media (max-width: 768px) {
+  .rating-filters-container {
+    grid-template-columns: 1fr;
+  }
+}

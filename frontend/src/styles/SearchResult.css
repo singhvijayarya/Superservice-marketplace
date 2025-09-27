@@ -1,0 +1,218 @@
+/* Glassmorphism Search Results CSS */
+.glass-search-results {
+    width: 100%;
+    min-height: 100vh;
+    padding: 2rem;
+    background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .glass-bg-particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+  
+  .glass-particle {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    filter: blur(1px);
+  }
+  
+  .glass-content-wrapper {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .glass-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    color: white;
+  }
+  
+  .glass-header h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .glass-header-icon {
+    color: #6a5acd;
+    margin-right: 12px;
+    font-size: 1.8rem;
+  }
+  
+  .glass-subtitle {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  .glass-results-container {
+    margin-top: 1.5rem;
+  }
+  
+  .glass-provider-card {
+    border-radius: 16px !important;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    transition: all 0.3s ease;
+  }
+  
+  .glass-provider-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2) !important;
+    border-color: rgba(106, 90, 205, 0.5) !important;
+  }
+  
+  .glass-card-header {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem 1.5rem 0;
+    margin-bottom: 1.5rem;
+  }
+  
+  .glass-avatar-container {
+    position: relative;
+    margin-right: 1rem;
+  }
+  
+  .glass-avatar {
+    border: 3px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .glass-status-badge {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+  }
+  
+  .glass-status-badge[data-status="online"] {
+    background-color: #52c41a;
+  }
+  
+  .glass-status-badge[data-status="offline"] {
+    /* background-color: #f5222d 8c8c8c; */
+    border: none;
+  }
+  
+  /* .glass-status-badge[data-status="Offline"] {
+    background-color: #8c8c8c;
+  } */
+  
+  .glass-provider-info {
+    flex: 1;
+  }
+  
+  .glass-provider-name {
+    margin: 0;
+    font-size: 1.2rem;
+    color: white;
+  }
+  
+  .glass-provider-role {
+    margin-top: 5px;
+    font-size: 0.8rem;
+  }
+  
+  .glass-card-body {
+    padding: 0 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .glass-detail-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.8rem;
+    color: rgba(255, 255, 255, 0.9);
+  }
+  
+  .glass-detail-icon {
+    margin-right: 10px;
+    color: #6a5acd;
+    font-size: 16px;
+  }
+  
+  .glass-rating {
+    font-size: 14px;
+    margin-right: 8px;
+  }
+  
+  .glass-rating .ant-rate-star {
+    color: #6a5acd;
+  }
+  
+  .glass-rating-text {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  .glass-review-summary {
+    margin: 1.5rem 0;
+    padding: 0 1.5rem;
+  }
+  
+  .glass-card-footer {
+    padding: 1rem 1.5rem 1.5rem;
+  }
+  
+  .glass-contact-btn {
+    background: linear-gradient(135deg, #6a5acd 0%, #48d1cc 100%);
+    border: none;
+    height: 40px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+  
+  .glass-contact-btn:hover {
+    background: linear-gradient(135deg, #48d1cc 0%, #6a5acd 100%);
+  }
+  
+  .glass-empty-state {
+    padding: 3rem 0;
+    text-align: center;
+  }
+  
+  .glass-empty-description {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.1rem;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .glass-search-results {
+      padding: 1rem;
+    }
+    
+    .glass-header h1 {
+      font-size: 1.8rem;
+    }
+    
+    .glass-card-header {
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    .glass-avatar-container {
+      margin-right: 0;
+      margin-bottom: 1rem;
+    }
+  }

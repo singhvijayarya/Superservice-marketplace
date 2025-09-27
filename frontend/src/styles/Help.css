@@ -1,0 +1,43 @@
+/* Help.css */
+.glassmorphism-card {
+  background: rgba(255, 255, 255, 0.2) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  border-radius: 12px !important;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15) !important;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.help-container {
+  padding: 20px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.help-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: rgba(0, 0, 0, 0.85);
+}
+
+.help-content {
+  font-size: 1rem;
+  margin-bottom: 12px;
+  color: rgba(0, 0, 0, 0.65);
+  line-height: 1.5;
+}
+
+.help-date {
+  font-size: 0.85rem;
+  color: rgba(0, 0, 0, 0.45);
+  margin-bottom: 0;
+}
+
+/* Add this for the hover effect */
+.glassmorphism-card:hover {
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.25) !important;
+  transform: translateY(-2px);
+}
